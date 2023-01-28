@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width, height=device-height, 
+                     minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+    <title>Insert title here</title>
+    <style>
+    div {
+        width: 100%;
+        height: 1000px;
+        border: 1px solid #000;
+    }
+    div.left {
+        width: 40%;
+        float: left;
+        box-sizing: border-box;
+        
+        background: #c4b8d4 ;
+    }
+    div.right {
+        width: 60%;
+        float: right;
+        box-sizing: border-box;
+        background: rgb(207, 188, 226);
+    }
+    </style>
+</head>
+ 
+<body>
+    <div>
+        <div class="left">
+                <h2>문제</h2>
+                <p>한밭대 XX학과 XX과목 성적을 입력받는 프로그램 작성하려고 한다.
+                10명의 학생의 이름과 성적을 입력받는다. 
+                또한 중간고사 기말고사를 따로 입력받고 마지막엔 성적의 평균을 구한다.
+                성적의 평균 40 점을 넘지 못하면 과락을 표시해준다.
+                성적순으로 정렬하라</p>
+                
+                <h2>입력예시</h2>
+
+
+                <h2>출력예시</h2>
+
+                <a class="btn" href="{% url 'submit' %}" >내가 제출한 문제</a>
+
+        </div>
+        <div class="right">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <input type="submit" value="제출">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

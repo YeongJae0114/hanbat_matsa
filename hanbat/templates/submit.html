@@ -1,0 +1,44 @@
+<article id="activ">
+        <h1 class="border-left border-primary">게시판</h1>
+        <table class="table mt-5">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col" class="text-center">제목</th>
+                <th scope="col" class="text-right">일시</th>
+              </tr>
+            </thead>
+           
+            <tbody>      
+            {% for post in posts %}
+              <tr>
+                <th scope="row">{{ post.id }}</th>
+            
+                <td class="text-center"></strong><a href="{% url 'detail' post.id %}">{{ post.title }}</a></td>
+                <td class="text-right">{{ post.date }}</td>
+              </tr>
+            {% endfor %}
+              <tr>
+            </tbody>
+
+          </table>
+          <div class="container">
+          </div>
+          <div id="searchbar" class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="검색" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">찾기</button>
+            </div>
+          </div>
+          </div>
+    </article>
+                                                               
+           
+            
+                    
+
+
+
+                               
+            
+
